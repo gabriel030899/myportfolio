@@ -1,40 +1,143 @@
-import './page.scss';
+"use client";
 
+import { useEffect, useState, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faJsSquare,
+    faReact,
+    faAngular,
+    faPython,
+    faPhp,
+    faHtml5,
+    faCss3,
+    faDocker,
+    faGithub,
+    faLinkedin,
+    faWhatsappSquare
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import "./page.scss";
 
-const Contact = () => {
-    return (
-        <>
-            <div className="container contact-page">
-                <div className="text-zone">
-                    <h1>Contact Me</h1>
-                    <p>
-                        I am interested in growing up as a developer, becoming fullstack in the future and helping other people achieving their goals. Feel free to get in touch with me, I`ll be very happy and thankful for the contact. You can contact me using the form below.
-                    </p>
-                    <div className="contact-form">
-                        <form>
-                            <ul>
-                                <li className="half">
-                                    <input type="text" name="name" placeholder="Name" required/>
-                                </li>
-                                <li className="half">
-                                    <input type="email" name="email" placeholder="Email" required/>
-                                </li>
-                                <li>
-                                    <input placeholder="Subject" type="text" name="subject" required/>
-                                </li>
-                                <li>
-                                    <textarea className="message-area" placeholder="Message" name="message" required></textarea>
-                                </li>
-                                <li className="form-button">
-                                    <input type="submit" className="flat-button" value="SEND"/>
-                                </li>
-                            </ul>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
+const iconsList = [
+    { icon: faJsSquare, name: "JavaScript" },
+    { icon: faReact, name: "React" },
+    { icon: faAngular, name: "Angular" },
+    { icon: faPython, name: "Python" },
+    { icon: faPhp, name: "PHP" },
+    { icon: faHtml5, name: "HTML" },
+    { icon: faCss3, name: "CSS" },
+    { icon: faDocker, name: "Docker" },
+];
+
+// Função para calcular distância entre dois pontos (em %)
+function distance(pos1, pos2) {
+  const dx = pos1.left - pos2.left;
+  const dy = pos1.top - pos2.top;
+  return Math.sqrt(dx * dx + dy * dy);
 }
 
-export default Contact;
+// Gera posições aleatórias sem sobreposição
+function generateNonOverlappingPositions(count, minDistance = 10) {
+  const positions = [];
+
+  for (let i = 0; i < count; i++) {
+    let tries = 0;
+    let pos;
+    do {
+      pos = {
+        top: Math.random() * 80 + 10, // 10% a 90% vertical
+        left: Math.random() * 45 + 50, // 50% a 95% horizontal (mais para centro)
+      };
+      tries++;
+      // Verifica distância mínima para todos os anteriores
+    } while (
+      positions.some((p) => distance(p, pos) < minDistance) &&
+      tries < 100
+    );
+    positions.push(pos);
+  }
+
+  return positions;
+}
+
+export default function Contact() {
+    const [positions, setPositions] = useState([]);
+    const timeoutRef = useRef(null);
+
+    useEffect(() => {
+      function updatePositions() {
+        const newPositions = generateNonOverlappingPositions(iconsList.length, 12);
+        setPositions(newPositions);
+        // Agenda a próxima atualização após 5s (duração da animação)
+        timeoutRef.current = setTimeout(updatePositions, 5000);
+      }
+
+      updatePositions();
+
+      return () => {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      };
+    }, []);
+
+    return (
+      <div className="contact-page">
+        <div className="contact-left">
+          <h1>Contato</h1>
+          <p>
+            Como desenvolvedor fullstack, estou sempre aberto a novos desafios e oportunidades que
+            envolvam soluções robustas, escaláveis e eficientes. Se você busca um profissional com
+            domínio tanto no front-end quanto no back-end, que valoriza boas práticas, arquitetura
+            limpa e entrega de valor, vamos conversar.
+          </p>
+          <p>
+            Para entrar em contato, você pode acessar minhas redes sociais LinkedIn e GitHub, enviar
+            uma mensagem via WhatsApp ou enviar um email diretamente.
+          </p>
+          <div className="contact-links">
+            <a
+              href="https://www.linkedin.com/in/gabrielzanella99/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+            </a>
+            <a
+              href="https://github.com/gabriel030899"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <FontAwesomeIcon icon={faGithub} /> GitHub
+            </a>
+            <a
+              href="https://wa.me/5519999009796"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <FontAwesomeIcon icon={faWhatsappSquare} /> (19) 9 9900-9796
+            </a>
+            <a href="mailto:gabriel030899@gmail.com" aria-label="Email">
+              <FontAwesomeIcon icon={faEnvelope} /> Gmail
+            </a>
+          </div>
+        </div>
+        <div className="contact-right">
+          {iconsList.map((item, index) => (
+            <FontAwesomeIcon
+              key={item.name}
+              icon={item.icon}
+              title={item.name}
+              className="tech-icon"
+              style={{
+                top: `${positions[index]?.top || 50}%`,
+                left: `${positions[index]?.left || 80}%`,
+                animationDelay: `${index * 0.5}s`,
+              }}
+            />
+          ))}
+        </div>
+      </div>
+    );
+}

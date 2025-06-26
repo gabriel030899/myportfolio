@@ -45,11 +45,11 @@ const highlightProjects = [
             {name:'REACT'},
             {name:'NEXTJS'},
             {name:'TYPESCRIPT'},
-            {name:'JAVA'},
+            {name:'NODEJS'},
         ],
         github: 'https://github.com/gabriel030899/lojify-platform',
         image: lojify,
-        description: "I am developing Lojify to be a SaaS platform. The idea is to create a user-friendly web platform for stores. I am using Next.js, React, TypeScript, Tailwind, and Java for the back end in the future. Even if it might be overengineered, the creation of the back end in Java is for learning purposes. The focus of the platform is to offer a better and more intuitive solution to manage store sales, enabling features like creating carts while attending customers and completing sales at the counter. Some essential functionalities include issuing invoices, managing products, managing carts, and providing sales summaries. The manager will have access to an exclusive dashboard to view various charts and reports on sales, employees, and customers."
+        description: "I am developing Lojify to be a SaaS platform. The idea is to create a user-friendly web platform for stores. I am using Next.js, React, TypeScript, Tailwind, and NodeJS for the back end in the future. The focus of the platform is to offer a better and more intuitive solution to manage store sales, enabling features like creating carts while attending customers and completing sales at the counter. Some essential functionalities include issuing invoices, managing products, managing carts, and providing sales summaries. The manager will have access to an exclusive dashboard to view various charts and reports on sales, employees, and customers."
     }
 ]
 

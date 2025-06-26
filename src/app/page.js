@@ -3,7 +3,7 @@ import Link from "next/link";
 import myphoto from "../../public/mypicturedark.png";
 import Image from "next/image";
 import "./page.scss";
-import {faCss3, faGithub, faHtml5, faJava, faJsSquare, faLinkedin, faPhp, faPython, faReact, faVuejs } from "@fortawesome/free-brands-svg-icons";
+import {faAngular, faCss3, faGithub, faHtml5, faJsSquare, faLinkedin, faPython, faReact } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import highlightProjects from "@/components/Lists/highlight-projects";
 import { faEllipsisH, faLink } from "@fortawesome/free-solid-svg-icons";
@@ -35,9 +35,7 @@ export default function Home() {
           <FontAwesomeIcon icon={faCss3} alt="CSS" title="CSS"/>
           <FontAwesomeIcon icon={faJsSquare} alt="JavaScript" title="JavaScript"/>
           <FontAwesomeIcon icon={faReact} alt="React" title="React"/>
-          <FontAwesomeIcon icon={faVuejs} alt="Vue" title="Vue"/>
-          <FontAwesomeIcon icon={faPhp} alt="PHP" title="PHP"/>
-          <FontAwesomeIcon icon={faJava} alt="Java" title="Java"/>
+          <FontAwesomeIcon icon={faAngular} alt="Angular" title="Angular"/>
           <FontAwesomeIcon icon={faPython} alt="Python" title="Python"/>
         </div>
         <div className="highlight-projects">
