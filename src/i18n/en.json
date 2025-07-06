@@ -1,0 +1,27 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "hello": "Hello,",
+    "im": "I'm Gabriel",
+    "role": "Web Developer",
+    "ctaProject": "Got a project?",
+    "ctaResume": "Download CV"
+  },
+  "about": {
+    "title": "About me",
+    "bio": "I am a web developer experienced in the complete project cycle: from requirements mapping, architecture, front-end and back-end, to deployment and maintenance. I mainly work with Power Platform (Power Apps, Power BI, Power Automate), using SharePoint and SQL Server databases. Recently, I've been diving deeper into React and Python to deliver more modern and scalable web solutions."
+  },
+  "bignumbers": {
+    "projects": "30+ delivered projects",
+    "years": "4+ years of experience",
+    "fullcycle": "100% full project lifecycle"
+  },
+  "footer": {
+    "text": "© 2024 Gabriel Zanella. All rights reserved."
+  }
+}

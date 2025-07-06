@@ -1,12 +1,12 @@
-import NavBar from "@/components/NavBar";
+import BigNumbers from "@/components/BigNumbers/BigNumbers";
 import Link from "next/link";
 import myphoto from "../../public/mypicturedark.png";
 import Image from "next/image";
 import "./page.scss";
-import {faAngular, faCss3, faGithub, faHtml5, faJsSquare, faLinkedin, faPython, faReact } from "@fortawesome/free-brands-svg-icons";
+import { faDocker, faGithub, faHtml5, faJsSquare, faLinkedin, faMicrosoft, faPython, faReact } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import highlightProjects from "@/components/Lists/highlight-projects";
-import { faEllipsisH, faLink } from "@fortawesome/free-solid-svg-icons";
+import { faDatabase, faEllipsisH, faLink } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Home() {
@@ -30,13 +30,14 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <BigNumbers />
         <div className="my-skills-icons">
-          <FontAwesomeIcon icon={faHtml5} alt="HTML" title="HTML" />
-          <FontAwesomeIcon icon={faCss3} alt="CSS" title="CSS"/>
           <FontAwesomeIcon icon={faJsSquare} alt="JavaScript" title="JavaScript"/>
           <FontAwesomeIcon icon={faReact} alt="React" title="React"/>
-          <FontAwesomeIcon icon={faAngular} alt="Angular" title="Angular"/>
           <FontAwesomeIcon icon={faPython} alt="Python" title="Python"/>
+          <FontAwesomeIcon icon={faDocker} alt="Docker" title="Docker"/>
+          <FontAwesomeIcon icon={faDatabase} alt="SQL" title="SQL"/>
+          <FontAwesomeIcon icon={faMicrosoft} alt="Azure" title="Azure"/>
         </div>
         <div className="highlight-projects">
           <h2>Projetos Destaque</h2>

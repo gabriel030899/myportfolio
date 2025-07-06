@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import LanguageToggle from "@/components/LanguageToggle";
 import logoblue from "../../../public/logoblue.png";
 import './index.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faSun } from "@fortawesome/free-solid-svg-icons";
 
 
 const NavBar = () => {
@@ -27,13 +27,10 @@ const NavBar = () => {
                     <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/gabrielzanella99/"><FontAwesomeIcon icon={faLinkedin}/></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/gabriel030899"><FontAwesomeIcon icon={faGithub} /></a>
                 </div>
-                {/*<div className="navbar-menu-separator">
+                <div className="navbar-menu-separator">
                     <div></div>
                 </div>
-                <div className={"navbar-menu-buttons"}>
-                    <button><FontAwesomeIcon icon={faSun}/></button>
-                    <button>PT</button>
-                </div>*/}
+                <LanguageToggle />
             </div>
         </nav>
         </div>
