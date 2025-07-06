@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import LanguageToggle from "@/components/LanguageToggle";
@@ -5,9 +6,11 @@ import logoblue from "../../../public/logoblue.png";
 import './index.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-
+import { useLanguage } from "@/components/LanguageContext";
 
 const NavBar = () => {
+    const { t } = useLanguage();
+
     return (
         <div className={"navbar-container"}>
         <nav className={"navbar"}>
@@ -18,9 +21,9 @@ const NavBar = () => {
                 </Link>
             </div>
             <div className={"navbar-links"}>
-                <Link href="/projects">Projetos</Link>
-                <Link href="/about">Sobre</Link>
-                <Link href="/contact">Contato</Link>
+                <Link href="/projects">{t("header.projects")}</Link>
+                <Link href="/about">{t("header.about")}</Link>
+                <Link href="/contact">{t("header.contact")}</Link>
             </div>
             <div className={"navbar-menu"}>
                 <div className="links-icons">

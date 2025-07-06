@@ -6,20 +6,44 @@
     "contact": "Contact"
   },
   "hero": {
-    "hello": "Hello,",
-    "im": "I'm Gabriel",
+    "name": "Gabriel Zanella",
     "role": "Web Developer",
-    "ctaProject": "Got a project?",
-    "ctaResume": "Download CV"
-  },
-  "about": {
-    "title": "About me",
-    "bio": "I am a web developer experienced in the complete project cycle: from requirements mapping, architecture, front-end and back-end, to deployment and maintenance. I mainly work with Power Platform (Power Apps, Power BI, Power Automate), using SharePoint and SQL Server databases. Recently, I've been diving deeper into React and Python to deliver more modern and scalable web solutions."
+    "specialty": "Front-End",
+    "aboutMe": "About Me"
   },
   "bignumbers": {
     "projects": "30+ delivered projects",
     "years": "4+ years of experience",
     "fullcycle": "100% full project lifecycle"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "viewProject": "View Project",
+    "github": "Github",
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "title": "About Me",
+    "bio": "I am a Data Analyst and Full Stack Web Developer, currently working as a Senior Data Analyst at NBS Latam, where I develop applications and software using Microsoft's Power Platform (Power BI, Power Apps, and Power Automate), optimizing processes and improving operational efficiency. I work directly with clients and stakeholders to define requirements, model process flows, and develop mockups, applying agile methodologies such as SCRUM.",
+    "expertise": "My expertise goes beyond the Power Platform. I have solid knowledge in web development, with proficiency in HTML, CSS, Javascript, React.js, TypeScript, Next.js, PHP, and Python.",
+    "skillsTitle": "Skills & Experience",
+    "skills": [
+      "HTML - CSS - JavaScript - React.js - React Native - TypeScript - Angular - Next.js",
+      "Python - SQL - Azure - Node.js - PHP",
+      "Power BI - Power Apps - Power Automate",
+      "Data Analysis - Process Automation",
+      "UX/UI - Prototyping - Process Modeling"
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "As a fullstack developer, I'm always open to new challenges and opportunities involving robust, scalable, and efficient solutions. If you're looking for a professional with expertise in both front-end and back-end, who values good practices, clean architecture, and value delivery, let's talk.",
+    "contactInfo": "To get in touch, you can access my social networks LinkedIn and GitHub, send a message via WhatsApp, or send an email directly."
+  },
+  "projectDescriptions": {
+    "portfolio": "I built my portfolio website entirely with React.js, ensuring a fast and dynamic user experience. The project is fully responsive, adapting seamlessly to all devices. For styling, I used SASS, allowing for modular and maintainable CSS with enhanced flexibility. To handle contact form submissions efficiently, I integrated the EmailJS library, enabling direct email sending without the need for a back-end. The combination of React.js, SASS, and EmailJS ensures a modern, scalable, and visually appealing portfolio.",
+    "comicReaders": "I developed Comic Readers, a website designed to enhance the user experience in book searches. Using HTML, CSS, and JavaScript, I created an intuitive interface with advanced filters that make searches faster and more efficient. Additionally, I developed a book recommendation algorithm that suggests options based on user choices, creating a dynamic and personalized experience. This solution offers multiple combinations of suggestions, making it easier to choose books that match the user's interests. The project not only improves interaction but also integrates features that make the literary discovery process more engaging and accurate.",
+    "lojify": "I am developing Lojify to be a SaaS platform. The idea is to create a user-friendly web platform for stores. I am using Next.js, React, TypeScript, Tailwind, and NodeJS for the back end in the future. The focus of the platform is to offer a better and more intuitive solution to manage store sales, enabling features like creating carts while attending customers and completing sales at the counter. Some essential functionalities include issuing invoices, managing products, managing carts, and providing sales summaries. The manager will have access to an exclusive dashboard to view various charts and reports on sales, employees, and customers."
   },
   "footer": {
     "text": "© 2024 Gabriel Zanella. All rights reserved."

@@ -6,20 +6,44 @@
     "contact": "Contato"
   },
   "hero": {
-    "hello": "Olá,",
-    "im": "Sou Gabriel",
+    "name": "Gabriel Zanella",
     "role": "Desenvolvedor Web",
-    "ctaProject": "Tem um projeto?",
-    "ctaResume": "Baixar CV"
-  },
-  "about": {
-    "title": "Sobre mim",
-    "bio": "Sou desenvolvedor web com experiência em todo o ciclo de desenvolvimento de projetos, desde o mapeamento de requisitos, arquitetura, front-end, back-end, até deploy e manutenção. Atuo principalmente com Power Platform (Power Apps, Power BI, Power Automate), com projetos usando bancos de dados em SharePoint e SQL Server. Recentemente, estou aprofundando meus conhecimentos em React e Python, ampliando minha atuação para soluções web mais modernas e escaláveis."
+    "specialty": "Front-End",
+    "aboutMe": "Sobre Mim"
   },
   "bignumbers": {
     "projects": "+30 projetos entregues",
     "years": "+4 anos de experiência",
     "fullcycle": "100% ciclo completo do projeto"
+  },
+  "projects": {
+    "title": "Projetos Destaque",
+    "viewProject": "Ver Projeto",
+    "github": "Github",
+    "learnMore": "Saiba Mais"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "bio": "Sou Analista de Dados e Desenvolvedor Web Full Stack, atualmente trabalhando como Analista de Dados Pleno na NBS Latam, onde desenvolvo aplicações e softwares utilizando a Power Platform da Microsoft (Power BI, Power Apps e Power Automate), otimizando processos e melhorando a eficiência operacional. Trabalho diretamente com clientes e stakeholders para definir requisitos, modelar fluxos de processos e desenvolver mockups, aplicando metodologias ágeis como SCRUM.",
+    "expertise": "Minha expertise vai além da Power Platform. Possuo conhecimento sólido em desenvolvimento web, com proficiência em HTML, CSS, Javascript, React.js, Typescript, Next.js, PHP e Python.",
+    "skillsTitle": "Habilidades & Experiência",
+    "skills": [
+      "HTML - CSS - JavaScript - React.js - React Native - TypeScript - Angular - Next.js",
+      "Python - SQL - Azure - Node.js - PHP",
+      "Power BI - Power Apps - Power Automate",
+      "Análise de Dados - Automação de Processos",
+      "UX/UI - Prototipagem - Modelagem de Processos"
+    ]
+  },
+  "contact": {
+    "title": "Contato",
+    "description": "Como desenvolvedor fullstack, estou sempre aberto a novos desafios e oportunidades que envolvam soluções robustas, escaláveis e eficientes. Se você busca um profissional com domínio tanto no front-end quanto no back-end, que valoriza boas práticas, arquitetura limpa e entrega de valor, vamos conversar.",
+    "contactInfo": "Para entrar em contato, você pode acessar minhas redes sociais LinkedIn e GitHub, enviar uma mensagem via WhatsApp ou enviar um email diretamente."
+  },
+  "projectDescriptions": {
+    "portfolio": "Construí meu site de portfólio inteiramente com React.js, garantindo uma experiência de usuário rápida e dinâmica. O projeto é totalmente responsivo, adaptando-se perfeitamente a todos os dispositivos. Para estilização, usei SASS, permitindo CSS modular e sustentável com flexibilidade aprimorada. Para lidar com envios de formulário de contato de forma eficiente, integrei a biblioteca EmailJS, permitindo envio direto de email sem necessidade de back-end. A combinação de React.js, SASS e EmailJS garante um portfólio moderno, escalável e visualmente atraente.",
+    "comicReaders": "Desenvolvi o Comic Readers, um site projetado para melhorar a experiência do usuário em buscas de livros. Usando HTML, CSS e JavaScript, criei uma interface intuitiva com filtros avançados que tornam as buscas mais rápidas e eficientes. Além disso, desenvolvi um algoritmo de recomendação de livros que sugere opções baseadas nas escolhas do usuário, criando uma experiência dinâmica e personalizada. Esta solução oferece múltiplas combinações de sugestões, facilitando a escolha de livros que combinam com os interesses do usuário. O projeto não apenas melhora a interação, mas também integra recursos que tornam o processo de descoberta literária mais envolvente e preciso.",
+    "lojify": "Estou desenvolvendo o Lojify para ser uma plataforma SaaS. A ideia é criar uma plataforma web amigável para lojas. Estou usando Next.js, React, TypeScript, Tailwind e NodeJS para o back end no futuro. O foco da plataforma é oferecer uma solução melhor e mais intuitiva para gerenciar vendas de lojas, permitindo recursos como criar carrinhos enquanto atende clientes e completar vendas no balcão. Algumas funcionalidades essenciais incluem emissão de faturas, gerenciamento de produtos, gerenciamento de carrinhos e fornecimento de resumos de vendas. O gerente terá acesso a um dashboard exclusivo para visualizar vários gráficos e relatórios sobre vendas, funcionários e clientes."
   },
   "footer": {
     "text": "© 2024 Gabriel Zanella. Todos os direitos reservados."

@@ -17,6 +17,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./page.scss";
+import { useLanguage } from "@/components/LanguageContext";
 
 const iconsList = [
     { icon: faJsSquare, name: "JavaScript" },
@@ -63,6 +64,7 @@ function generateNonOverlappingPositions(count, minDistance = 10) {
 export default function Contact() {
     const [positions, setPositions] = useState([]);
     const timeoutRef = useRef(null);
+    const { t } = useLanguage();
 
     useEffect(() => {
       function updatePositions() {
@@ -82,16 +84,12 @@ export default function Contact() {
     return (
       <div className="contact-page">
         <div className="contact-left">
-          <h1>Contato</h1>
+          <h1>{t("contact.title")}</h1>
           <p>
-            Como desenvolvedor fullstack, estou sempre aberto a novos desafios e oportunidades que
-            envolvam soluções robustas, escaláveis e eficientes. Se você busca um profissional com
-            domínio tanto no front-end quanto no back-end, que valoriza boas práticas, arquitetura
-            limpa e entrega de valor, vamos conversar.
+            {t("contact.description")}
           </p>
           <p>
-            Para entrar em contato, você pode acessar minhas redes sociais LinkedIn e GitHub, enviar
-            uma mensagem via WhatsApp ou enviar um email diretamente.
+            {t("contact.contactInfo")}
           </p>
           <div className="contact-links">
             <a

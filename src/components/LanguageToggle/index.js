@@ -1,25 +1,36 @@
+"use client";
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/components/LanguageContext";
+import ClientOnly from "@/components/ClientOnly";
 import "./index.scss";
 
 const LanguageToggle = () => {
-  const { i18n } = useTranslation();
+  const { currentLanguage, changeLanguage } = useLanguage();
 
   return (
-    <div className="language-toggle">
-      <button
-        className={`lang-btn${i18n.language === "pt" ? " active" : ""}`}
-        onClick={() => i18n.changeLanguage("pt")}
-      >
-        PT
-      </button>
-      <button
-        className={`lang-btn${i18n.language === "en" ? " active" : ""}`}
-        onClick={() => i18n.changeLanguage("en")}
-      >
-        EN
-      </button>
-    </div>
+    <ClientOnly
+      fallback={
+        <div className="language-toggle">
+          <button className="lang-btn active">PT</button>
+          <button className="lang-btn">EN</button>
+        </div>
+      }
+    >
+      <div className="language-toggle">
+        <button
+          className={`lang-btn${currentLanguage === "pt" ? " active" : ""}`}
+          onClick={() => changeLanguage("pt")}
+        >
+          PT
+        </button>
+        <button
+          className={`lang-btn${currentLanguage === "en" ? " active" : ""}`}
+          onClick={() => changeLanguage("en")}
+        >
+          EN
+        </button>
+      </div>
+    </ClientOnly>
   );
 };
 
