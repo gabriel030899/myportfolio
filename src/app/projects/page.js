@@ -18,13 +18,22 @@ const Projects = () => {
                 <div className="projects-summary">
                     {highlightProjects.map((project) => (
                     <div key={project.id} className="project-card">
-                        <h3>{project.name}</h3>
-                        <Image src={project.image} alt={project.name} />
-                        <div className="project-skills">
-                        {project.skills.map((skill, index) => (
-                            <span key={index}>{skill.name}</span>
-                        ))}
+                        
+                        <div className="project-top">
+                            <Image src={project.image} alt={project.name} />
+                            <div className="project-description">
+                                <h3 className="project-name">{project.name}</h3>
+                                <div className="project-skills">
+                                    {project.skills.map((skill, index) => (
+                                        <span className="cards-skills" key={index}>{skill.name}</span>
+                                    ))}
+                                </div>
+                                <p>{project.description}</p>
+                                
+                            </div>
+                            
                         </div>
+                        
                         <div className="project-links">
                         <a href={project.link} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} />{t("projects.viewProject")}</a>
                         <a href={project.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} />{t("projects.github")}</a>
