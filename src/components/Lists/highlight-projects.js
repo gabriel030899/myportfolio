@@ -1,6 +1,7 @@
 import comicreaders1 from '../../../public/comicreaders1.png'
 import myportfolio from '../../../public/my-portfolio.png'
 import lojify from '../../../public/lojifyplatform.png'
+import gomarket from '../../../public/gomarketlanding.png'
 
 
 const highlightProjects = [
@@ -10,9 +11,8 @@ const highlightProjects = [
         link: 'https://www.gabrielzanella.com.br',
         linkName: 'gabrielzanella.com.br',
         skills: [
-            {name:'HTML'}, 
-            {name:'SASS'},
             {name:'REACT'},
+            {name:'SASS'},
             {name:'EMAILJS'},
             {name:'NEXTJS'}
         ],
@@ -40,9 +40,8 @@ const highlightProjects = [
         link: 'https://lojifyplatform.netlify.app/',
         linkName: 'lojifyplatform.netlify.app',
         skills: [
-            {name:'HTML'}, 
-            {name:'TAILWIND'},
             {name:'REACT'},
+            {name:'TAILWIND'},
             {name:'NEXTJS'},
             {name:'TYPESCRIPT'},
             {name:'NODEJS'},
@@ -50,6 +49,19 @@ const highlightProjects = [
         github: 'https://github.com/gabriel030899/lojify-platform',
         image: lojify,
         description: "I am developing Lojify to be a SaaS platform. The idea is to create a user-friendly web platform for stores. I am using Next.js, React, TypeScript, Tailwind, and NodeJS for the back end in the future. The focus of the platform is to offer a better and more intuitive solution to manage store sales, enabling features like creating carts while attending customers and completing sales at the counter. Some essential functionalities include issuing invoices, managing products, managing carts, and providing sales summaries. The manager will have access to an exclusive dashboard to view various charts and reports on sales, employees, and customers."
+    },
+    {
+        id: 4,
+        name: 'GoMarket (In Progress)',
+        link: '',
+        linkName: '',
+        skills: [
+            {name:'REACT NATIVE'},
+            {name:'PYTHON'},
+        ],
+        github: 'https://github.com/gabriel030899/gomarket',
+        image: gomarket,
+        description: "I am developing GoMarket app to ease the life of people who need to go to the market and don't remember where there are better prices. With GoMarket, the user can create market lists and the app will suggest the best market option based on the prices of the products. Also, they can scan the Nota Fiscal to update the products prices and update the report inside the app."
     }
 ]
 
